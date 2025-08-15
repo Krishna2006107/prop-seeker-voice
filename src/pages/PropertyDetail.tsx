@@ -235,7 +235,11 @@ export default function PropertyDetail() {
                   <Calendar className="h-4 w-4 mr-2" />
                   Book a Viewing
                 </Button>
-                <Button variant="contact" className="w-full">
+                <Button 
+                  variant="contact" 
+                  className="w-full"
+                  onClick={() => window.open(`tel:${property.agent.phone}`, '_self')}
+                >
                   Call Agent
                 </Button>
               </CardContent>
