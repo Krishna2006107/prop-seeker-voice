@@ -2,41 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Real Estate Design System - Professional & Modern */
 
 @layer base {
   :root {
+    /* Core Background & Text */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 20% 15%;
 
+    /* Card System */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 20% 15%;
 
+    /* Popover System */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary - Professional Navy Blue */
+    --primary: 217 33% 17%;
     --primary-foreground: 210 40% 98%;
+    --primary-light: 217 33% 25%;
+    --primary-glow: 217 85% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Gray */
+    --secondary: 210 15% 95%;
+    --secondary-foreground: 215 20% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Tones */
+    --muted: 210 15% 96%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Premium Orange */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 25 95% 85%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Success - Property Available */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Price Alert */
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI Elements */
+    --border: 214 15% 88%;
+    --input: 214 15% 88%;
+    --ring: 217 85% 55%;
 
-    --radius: 0.5rem;
+    /* Design System */
+    --radius: 0.75rem;
+
+    /* Real Estate Specific Colors */
+    --luxury: 270 50% 15%;
+    --luxury-foreground: 0 0% 100%;
+    --featured: 142 76% 36%;
+    --featured-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 33% 17%), hsl(217 33% 25%));
+    --gradient-card: linear-gradient(180deg, transparent, hsl(217 33% 17% / 0.05));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 60%));
+    --gradient-luxury: linear-gradient(135deg, hsl(270 50% 15%), hsl(270 50% 25%));
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px hsl(217 33% 17% / 0.08);
+    --shadow-card-hover: 0 8px 30px hsl(217 33% 17% / 0.15);
+    --shadow-luxury: 0 10px 40px hsl(270 50% 15% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
