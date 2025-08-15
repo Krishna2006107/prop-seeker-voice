@@ -62,37 +62,12 @@ export default function PropertyDetail() {
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulate webhook call
-    try {
-      const webhookData = {
-        propertyId: property.id,
-        propertyTitle: property.title,
-        contactForm,
-        timestamp: new Date().toISOString()
-      };
+    toast({
+      title: "Inquiry Sent!",
+      description: "Thank you for your interest. The agent will contact you soon.",
+    });
 
-      // Call webhook
-      await fetch('http://localhost:5678/webhook-test/df0ff9d4-b84a-4be0-a561-ad1466b9cc9c', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(webhookData)
-      });
-
-      toast({
-        title: "Inquiry Sent!",
-        description: "Thank you for your interest. The agent will contact you soon.",
-      });
-
-      setContactForm({ name: '', email: '', phone: '', message: '' });
-    } catch (error) {
-      toast({
-        title: "Message Sent",
-        description: "Your inquiry has been submitted successfully.",
-      });
-      setContactForm({ name: '', email: '', phone: '', message: '' });
-    }
+    setContactForm({ name: '', email: '', phone: '', message: '' });
   };
 
   const handleBookViewing = () => {
@@ -277,49 +252,15 @@ export default function PropertyDetail() {
                 <CardTitle>Send Inquiry</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleContactSubmit} className="space-y-4">
-                  <div>
-                    <Label htmlFor="name">Name</Label>
-                    <Input
-                      id="name"
-                      value={contactForm.name}
-                      onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={contactForm.email}
-                      onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input
-                      id="phone"
-                      value={contactForm.phone}
-                      onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      rows={4}
-                      placeholder="I'm interested in this property..."
-                      value={contactForm.message}
-                      onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <Button type="submit" variant="contact" className="w-full">
-                    Send Inquiry
-                  </Button>
-                </form>
+                <div className="w-full h-96">
+                  <iframe
+                    src="http://localhost:5678/form/6a3bc9b4-7cd8-4e0d-bf61-d241e3e077ef"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 'none', borderRadius: '8px' }}
+                    title="Property Inquiry Form"
+                  />
+                </div>
               </CardContent>
             </Card>
           </div>
