@@ -254,7 +254,7 @@ export default function PropertyDetail() {
               <CardContent>
                 <div className="w-full h-96">
                   <iframe
-                    src="http://localhost:5678/form/6a3bc9b4-7cd8-4e0d-bf61-d241e3e077ef"
+                    src="https://candy-triangle-decided-spies.trycloudflare.com/form/6a3bc9b4-7cd8-4e0d-bf61-d241e3e077ef"
                     width="100%"
                     height="100%"
                     style={{ border: 'none', borderRadius: '8px' }}
